@@ -18,6 +18,11 @@ public class MarquePage
     {
     }
 
+    public MarquePage(int page)
+    {
+        this.currentPage = page;
+    }
+
     /**
      * An example of a method - replace this comment with your own
      *

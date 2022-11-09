@@ -17,6 +17,11 @@ public class Livre
     /**
      * Constructor for objects of class Livre
      */
+    public Livre()
+    {
+        this.mp = new MarquePage();
+    }
+
     public Livre(MarquePage mp)
     {
         this.mp = mp;
@@ -72,5 +77,13 @@ public class Livre
     public void setBibli(Bibli bibli)
     {
         this.bibli = bibli;
+    }
+
+    public MarquePage getMp() {
+        return mp;
+    }
+    
+    public void setMp(MarquePage mp) {
+        this.mp = mp;
     }
 }

@@ -5,8 +5,8 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "resources/features/US_001.feature", glue = "")
+@CucumberOptions(features = "resources/features/US_002.feature", glue = "")
 
-public class TestRunner_US_001 {
+public class TestRunner_US_002 {
 
 }
