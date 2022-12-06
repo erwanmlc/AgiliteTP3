@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @version (02/11/2022)
  */
 
-public class Bibli
+public class Bibliotheque
 {
 
     private ArrayList<Livre> livres = new ArrayList<Livre>();

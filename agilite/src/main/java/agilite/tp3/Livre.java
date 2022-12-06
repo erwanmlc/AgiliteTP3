@@ -12,7 +12,7 @@ public class Livre
     private int note = 10;
     private String nom = "pasdetitre";
     private MarquePage mp;
-    private Bibli bibli;
+    private Bibliotheque bibli;
 
     /**
      * Constructor for objects of class Livre
@@ -69,12 +69,12 @@ public class Livre
         mp.setPage(p);
     }
 
-    public Bibli getBibli()
+    public Bibliotheque getBibli()
     {
         return bibli;
     }
 
-    public void setBibli(Bibli bibli)
+    public void setBibli(Bibliotheque bibli)
     {
         this.bibli = bibli;
     }

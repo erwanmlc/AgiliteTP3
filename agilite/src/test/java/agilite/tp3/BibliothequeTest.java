@@ -8,7 +8,7 @@ import org.junit.Test;
 public class BibliothequeTest
 {
 
-    protected Bibli biblitest;
+    protected Bibliotheque biblitest;
     protected MarquePage mp;
     protected Livre livretest;
 
@@ -16,7 +16,7 @@ public class BibliothequeTest
     @Before
     public void setUp()
     {
-        biblitest = new Bibli();
+        biblitest = new Bibliotheque();
         mp = new MarquePage();
         livretest = new Livre(mp);
     }
