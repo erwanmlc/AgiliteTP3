@@ -9,7 +9,7 @@ public class Football extends Sport
 
     @Override
     public String description() {
-        return "11 contre 11 avec un ballon, il faut marquer le plus de but pour gagner.";
+        return "2 equipes avec un ballon, il faut marquer le plus de but pour gagner.";
     }
 
 }

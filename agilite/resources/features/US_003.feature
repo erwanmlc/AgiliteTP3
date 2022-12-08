@@ -15,5 +15,5 @@ Feature: US_003 Ajouter un livre a la bibliotheque
 
     Examples:
         | livre                     | sport                   | description                                                                |
-        | "Le foot pour les nuls"   | "Football traditionnel" | "11 contre 11 avec un ballon, il faut marquer le plus de but pour gagner." |
-        | "Le futsal pour les nuls" | "Futsal"                | "11 contre 11 avec un ballon, il faut marquer le plus de but pour gagner." |
+        | "Le foot pour les nuls"   | "Football traditionnel" | "2 equipes avec un ballon, il faut marquer le plus de but pour gagner." |
+        | "Le futsal pour les nuls" | "Futsal"                | "2 equipes avec un ballon, il faut marquer le plus de but pour gagner." |
