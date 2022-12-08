@@ -30,7 +30,10 @@ public class TestSport
     @Test
     public void testSport1(){
         Sport s = new Football("Football traditionnel");
+        Athlete a = new Athlete("Charles", s);
         assertEquals(s.getNameSport(), "Football traditionnel");
+        assertEquals(s.isAthleteAlreadyInSport(a.getNameAthlete()), true);
+        assertEquals(s.getListAthletes(), "Charles");
     }
 
 }
