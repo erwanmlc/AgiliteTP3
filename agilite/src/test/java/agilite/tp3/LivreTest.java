@@ -49,8 +49,9 @@ public class LivreTest
     public void testPrixGoncourt()
     {
         MarquePage mp = new MarquePage();
-        Livre livretest = new Livre(mp);
-        assertEquals(15, livretest.prixGoncourt(5));
+        Sport sport = new Football("Football traditionnel");
+        BandeDessinee bd = new BandeDessinee(mp, sport);
+        assertEquals(15, bd.prixGoncourt(5));
     }
 }
 

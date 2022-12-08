@@ -10,26 +10,24 @@ public class BibliothequeTest
 
     protected Bibliotheque biblitest;
     protected MarquePage mp;
-    protected Livre livretest;
-
+    protected BandeDessinee bdtest;
+    protected Sport sport;
 
     @Before
     public void setUp()
     {
-        biblitest = new Bibliotheque();
+        biblitest = Bibliotheque.getInstance();
         mp = new MarquePage();
-        livretest = new Livre(mp);
+        sport = new Football("Football traditionnel");
+        bdtest = new BandeDessinee(mp, sport);
     }
     
     @Test
     public void testAjoutDeLivre()
     {
-        biblitest.setNom("Francois Mitterand");
-        biblitest.ajoutLivre(livretest);
-        // on cherche à vérifier que la méthode addLivre met bien à jour l'objet bibliothèque du livre ajouté
-        assertEquals("Francois Mitterand", livretest.getBibli().getNom());
-        // on cherche à vérifier que la méthode addLivre met bien à jour l'arraylist livres de la bibliothèque en question
-        assertEquals(livretest, biblitest.getLivres().get(0));
+        biblitest.ajoutLivre(bdtest);
+        // on cherche à vérifier que la méthode ajoutLivre met bien à jour l'arraylist livres de la bibliothèque
+        assertEquals(bdtest, biblitest.getLivres().get(0));
     }
 
     @Test

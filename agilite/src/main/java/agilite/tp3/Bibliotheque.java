@@ -12,8 +12,25 @@ import java.util.ArrayList;
 public class Bibliotheque
 {
 
+    private static Bibliotheque instance;
     private ArrayList<Livre> livres = new ArrayList<Livre>();
-    private String nom = "Sainte Geneviève";
+    private String nom = "Sainte Genevieve";
+
+    private Bibliotheque() {
+        // The following code emulates slow initialization.
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public static Bibliotheque getInstance() {
+        if (instance == null) {
+            instance = new Bibliotheque();
+        }
+        return instance;
+    }
 
     public ArrayList<Livre> getLivres() 
     {
@@ -27,7 +44,6 @@ public class Bibliotheque
 
     public void ajoutLivre(Livre l) 
     {
-        l.setBibli(this);
         livres.add(l);
     }
 

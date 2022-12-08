@@ -8,10 +8,10 @@ Feature: US_001 Attribuer le prix Goncourt à un livre
     et augmenter sa note (sur 20) du nombre de point(s) désiré.
 
     Scenario Outline: Mise à jour de la note en fonction du prix Goncourt
-    Given Un livre <liv>
+    Given Une bande dessinee <liv>
     And qui a une note de <note>
     When le juge attribue un prix Goncourt avec une augmentation de <points> points
-    Then la nouvelle <nouvellenote> du livre doit être mise à jour automatiquement.
+    Then la nouvelle <nouvellenote> de la bande dessinnee doit etre mise a jour automatiquement.
 
     Examples:
     | liv                   | note | points | nouvellenote |

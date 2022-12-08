@@ -7,10 +7,11 @@ import io.cucumber.java.en.*;
 
 public class StepDefsU001 {
     private MarquePage mp = new MarquePage();
-    private Livre l = new Livre(mp);
+    private Sport sport = new Football("Football traditionnel");
+    private Livre l = new BandeDessinee(mp, sport);
 
-    @Given("Un livre {string}")
-    public void creeLivreEtNom(String arg1) 
+    @Given("Une bande dessinee {string}")
+    public void creeBandeDessineeEtNom(String arg1) 
     {
         Assert.assertTrue(this.l!=null);
         l.setName(arg1);
@@ -28,7 +29,7 @@ public class StepDefsU001 {
         l.prixGoncourt(arg1);
     }
 
-    @Then("la nouvelle {int} du livre doit être mise à jour automatiquement.")
+    @Then("la nouvelle {int} de la bande dessinnee doit etre mise a jour automatiquement.")
     public void nouvelleNoteApresPrixGoncourt(int arg1) 
     {
         Assert.assertEquals(arg1, l.getNote());

@@ -6,25 +6,27 @@ package agilite.tp3;
  * @author (Sylvain THOR, Erwan MOALIC)
  * @version (02/11/2022)
  */
-public class Livre
+public abstract class Livre
 {
     // instance variables - replace the example below with your own
     private int note = 10;
-    private String nom = "pasdetitre";
+    private String nom = null;
     private MarquePage mp;
-    private Bibliotheque bibli;
+    private Sport sport;
 
     /**
      * Constructor for objects of class Livre
      */
-    public Livre()
+    public Livre(Sport sport)
     {
         this.mp = new MarquePage();
+        this.sport = sport;
     }
 
-    public Livre(MarquePage mp)
+    public Livre(MarquePage mp, Sport sport)
     {
         this.mp = mp;
+        this.sport = sport;
     }
     
     public String getName()
@@ -69,16 +71,6 @@ public class Livre
         mp.setPage(p);
     }
 
-    public Bibliotheque getBibli()
-    {
-        return bibli;
-    }
-
-    public void setBibli(Bibliotheque bibli)
-    {
-        this.bibli = bibli;
-    }
-
     public MarquePage getMp() {
         return mp;
     }
@@ -86,4 +78,14 @@ public class Livre
     public void setMp(MarquePage mp) {
         this.mp = mp;
     }
+
+    public Sport getSport() {
+        return sport;
+    }
+
+    public void setSport(Sport sport) {
+        this.sport = sport;
+    }
+
+    abstract public String ranger();
 }

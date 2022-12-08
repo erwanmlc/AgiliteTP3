@@ -15,7 +15,8 @@ import org.junit.Test;
 public class MarquePageTest
 {
     private MarquePage mp1;
-    private Livre livre1;
+    private Sport sport1;
+    private Livre encyclopedie1;
 
     /**
      * Default constructor for test class MarquePageTest
@@ -33,7 +34,8 @@ public class MarquePageTest
     public void setUp()
     {
         mp1 = new MarquePage();
-        livre1 = new Livre(mp1);
+        sport1 = new Football("Football traditionnel");
+        encyclopedie1 = new Encyclopedie(mp1, sport1);
     }
 
     /**
@@ -49,8 +51,7 @@ public class MarquePageTest
     @Test
     public void testDeplacerMP()
     {
-        livre1.deplacerMP(50);
+        encyclopedie1.deplacerMP(50);
         assertEquals(50, mp1.getPage());
     }
 }
-
