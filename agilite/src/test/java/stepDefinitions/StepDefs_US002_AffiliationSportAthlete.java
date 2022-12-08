@@ -15,10 +15,9 @@ public class StepDefs_US002_AffiliationSportAthlete {
 	private boolean b1 = true;
 	
 	private Sport s3;
-	private Athlete a4;
 	private Athlete a6;
 	
-	@Given("Le sport {string} est composé d une liste d athlètes {string} pratiquant ce sport")
+	@Given("Le sport : {string} est composé d une liste d athlètes {string} pratiquant ce sport")
 	public void sport_composer_liste_athlete_pratiquant_ce_sport(String arg1, String arg2) {
 		s1 = new Football(arg1);
 		a1 = new Athlete(arg2, s1);
@@ -27,7 +26,6 @@ public class StepDefs_US002_AffiliationSportAthlete {
 		Assert.assertEquals(s1.getListAthletes(), a1.getNameAthlete() + " ");	
 		
 		s3 = new Football(arg1);
-		a4 = new Athlete(arg2, s3);
 		Assert.assertEquals(s3.getNameSport(), arg1);
 		Assert.assertNotEquals(s3.getNbAthletes(), 0);
 		Assert.assertEquals(s3.getListAthletes(), arg2 + " ");
@@ -35,7 +33,7 @@ public class StepDefs_US002_AffiliationSportAthlete {
 		Assert.assertFalse(a6.isPraticeSport());
 	}
 
-	@When("L athlète {string} veut être associé à un nouveau sport alors qu il pratique déjà le sport suivant : {string}")
+	@When("L athlète {string} est associé au sport {string} alors qu il pratique déjà un autre sport : {string}")
 	public void athlete_veut_associer_nouveau_sport_mais_pratique_deja_autre_sport(String arg1, String arg2) {
 		s2 = new Football(arg2);
 		a3 = new Athlete(arg1, s2);
@@ -47,12 +45,12 @@ public class StepDefs_US002_AffiliationSportAthlete {
 		}
 	}
 
-	@Then("L'Athlete pratique déjà un sport donc le système refuse avec un message d erreur")
+	@Then("Le système refuse d ajouter l athlète à la liste du second sport avec un message d erreur")
 	public void systeme_refuse_ajout_msg_erreur() {
 		Assert.assertFalse(b1);
 	}
 
-	@When("L'Athlete {string} est associé au sport {string}")
+	@When("{string} est associé au sport suivant : {string}")
 	public void athlete_associe_nouveau_sport(String arg1) {
 		a6 = new Athlete(arg1, null);
 		a6.subscribeSport(s3);

@@ -20,10 +20,10 @@ Feature: USOO2 Affiliation d un athlète à un sport
   @tag2
   Scenario Outline: association à un sport d un athlète ne pratiquant actuellement aucun sport    
     Given Le sport : <sport> est composé d une liste d athlètes <ListAthletes> pratiquant ce sport
-    When <athlete> est associé au sport suivant : <sport> 
-    Then <athlete> fait dorénavent partis de la liste d athletes du sport : <sport>
+    When <athlete> est associé a ce sport 
+    Then l'athlete fait dorénavent partis de la liste d athletes du sport <NvlleListAthletes>
 
     Examples: 
-      |	 			  sport 					 |		ListAthletes   	|  		athlete 		 |
-      |  				Five 					   |   	Yanis				    |   	Mohammed  	 |
-      |  Football traditionnel 	 |   	Hakim				 	 	|  	  Ziyech	 	   |
+      | sport                 | ListAthletes | athlete  | NvlleListAthletes |
+      | Five                  | Yanis        | Mohammed | Yanis, Mohammed   |
+      | Football traditionnel | Hakim        | Ziyech   | Hakim, Ziyech     |
