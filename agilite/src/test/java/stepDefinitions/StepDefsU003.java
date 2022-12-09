@@ -9,10 +9,14 @@ public class StepDefsU003 {
     private Sport sport;
     private Livre l;
 
-    @Given("Un {string}")
-    public void creeSport(String arg1) 
+    @Given("Un {string} avec un nom {string}")
+    public void creeSport(String arg1, String arg2) 
     {
-        sport = new Football(arg1);
+        if (arg1.equals("Football")){
+            sport = new Football(arg2);
+        } else if (arg1.equals("Tennis")) {
+            sport = new Tennis(arg2);
+        }
         Assert.assertTrue(this.sport!=null);
     }
 
